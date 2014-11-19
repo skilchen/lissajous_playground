@@ -1,0 +1,9 @@
+"x","y","z","plottype","waveform","count"
+2,1,3,"lines","sine",16
+2,4,3,"lines","sine",3
+4,2,5,"spheres","sine",2
+2,1,3,"lines","triangle",3
+2,1,3,"spheres","triangle",2
+2,1,3,"spheres","sine",1
+1,8,4,"lines","sine",1
+1,8,4,"lines","triangle",1
