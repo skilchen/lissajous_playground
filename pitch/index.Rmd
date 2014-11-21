@@ -1,0 +1,73 @@
+---
+title       : Lissajous Figures 
+subtitle    : learn shiny building a playground for Lissajous Figures  
+author      : skilchen
+job         : struggling student in the coursera course Developing Data Products
+framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
+highlighter : highlight.js  # {highlight.js, prettify, highlight}
+hitheme     : tomorrow      # 
+widgets     : [mathjax, bootstrap]            # {mathjax, quiz, bootstrap}
+mode        : selfcontained # {standalone, draft}
+knit        : slidify::knit2slides
+---
+```{r setup, echo=FALSE, results='asis'}
+library(knitr)
+knit_hooks$set(webgl = hook_webgl)
+suppressWarnings(library(rgl))
+cat('<script type="text/javascript">', readLines(system.file('WebGL', 'CanvasMatrix.js', package = 'rgl')), '</script>', sep = '\n')
+```
+### Goals
+
+1. Use [something](http://en.wikipedia.org/wiki/Lissajous_curve) interesting to play with to learn shiny.
+2. Let the user interactively select parameters to draw Lissajous figures.
+3. Display the figures in a 3D WebGL canvas that allows the user to rotate and zoom the figure.
+4. Let the user save parameters that produced nice looking figures.
+5. Let the user display the figures, for which other people saved parameters by selecting a row from a data table.
+6. Store the preferred parameters persistently across sessions and application restarts.
+
+
+--- 
+
+## Lissajous figures
+
+Lissajous figures are graphs of overlayed waves defined by parametric equations of the following form  
+$x = A\cdot\sin(a\cdot t + d)$, $y = B\cdot\sin(b\cdot t + e)$, $z = C\cdot\sin(c\cdot t * f)$  
+where 
+* A,B,C define the amplitude of the waves
+* a,b,c define the frequency of the waves
+* d,e,f define the relative phase shift of the waves
+* t is the range of values for which the equations are evaluated
+
+To simplify the matters, in my toy application some of the parameters have fixed values, namely: $A = B = c = 1$, $d = e = f = 0$ and t is defined as `seq(0, 2*pi, length.out = 3 * 360)`.  
+The user can choose the values for a, b and c. Additionaly he can choose to draw the figures using lines or spheres. The figures can also be drawn using triangle waves of the form $x = A \cdot \arcsin(\sin(a \cdot t + d))$
+
+---
+### Example Lissajous Figure
+```{r example, webgl=TRUE, fig.height=5.2, fig.width=5.2}
+tt <- seq(0, 2*pi, length.out=360*3); x <- sin(2*tt); y <- sin(1*tt); z <- sin(3*tt)    
+lines3d(x, y, z, col=rainbow(1000))
+```
+<span><font size="-2">
+click and drag to rotate the figure, use the mouse wheel or middle button to zoom.
+</font></span>
+
+---
+### Selectable DataTable
+
+In the default [DataTable]((http://shiny.rstudio.com/articles/datatables.html) provided by shiny, it is not possible to detect what row a user has selected by clicking on a row. To implement the reactive row selection feature i found a solution in a [google discussion group about shiny]((https://groups.google.com/forum/\\#!topic/shiny-discuss/_zNZMR2gHn0).
+
+### Persistence
+To store the parameters persistently across user sessions and application restarts, i selected a [mongoDB](http://www.mongodb.org) database hosted on [mongolab]((https://mongolab.com).  
+
+### Links  
+My toy application: http://skilchen.shinyapps.io/lissajous_playground  
+The github repo: http://github.com/skilchen/lissajous_playground  
+
+Please give it a try. 
+Unfortunately on shinyapps.io my application occasionaly has very bad response times. I don't know why ...
+
+
+
+
+
+
