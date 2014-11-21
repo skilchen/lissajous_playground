@@ -1,6 +1,6 @@
 ---
 title       : Lissajous Figures 
-subtitle    : learn shiny building a playground for Lissajous Figures  
+subtitle    : learn shiny by building a playground for Lissajous Figures  
 author      : skilchen
 job         : struggling student in the coursera course Developing Data Products
 framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
