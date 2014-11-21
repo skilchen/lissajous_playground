@@ -56,7 +56,7 @@ CanvasMatrix4=function(m){if(typeof m=='object'){if("length"in m&&m.length>=16){
 <li>Display the figures in a 3D WebGL canvas that allows the user to rotate and zoom the figure. I am using the <a href="https://r-forge.r-project.org/projects/rgl/">RGL package</a>.</li>
 <li>Let the user store parameters that produced nice looking figures in a database and display the stored parameters in a <a href="http://shiny.rstudio.com/articles/datatables.html">DataTable</a>.</li>
 <li>Increment a count of how many times a parameterset was selected and update the database to store the new count.</li>
-<li>Let the user click on a row in the DataTable to display the figure which is produced by the parameters stored in the selected row.</li>
+<li>Let the user click on a row in the DataTable to display the figure which is produced by the parameters stored in the selected row. The <a href="http://shiny.rstudio.com/articles/datatables.html">DataTable</a> currently has no such feature. I am reusing a solution described in this <a href="https://groups.google.com/forum/#!topic/shiny-discuss/_zNZMR2gHn0">discussion</a> in the Google group about shiny.<br></li>
 <li>Store the favorite parameters persistently across sessions and application restarts using a <a href="http://www.mongodb.org">mongoDB</a> hosted on <a href="http://mongolab.com">mongolab</a>.</li>
 </ol>
 
@@ -81,7 +81,7 @@ where </p>
 </ul>
 
 <p>To simplify the matters, in my toy application some of the parameters have fixed values, namely: \(A = B = c = 1\), \(d = e = f = 0\) and t is defined as <code>seq(0, 2*pi, length.out = 3 * 360)</code>.<br>
-The user can choose the values for a, b and c. Additionaly he can choose to draw the figures using lines or spheres. The figures can also be drawn using triangle waves of the form \(x = A \cdot \arcsin(\sin(a \cdot t + d))\)</p>
+The user can choose the values for a, b and c. Additionally she can choose to draw the figures using lines or spheres. The figures can also be drawn using triangle waves of the form \(x = A \cdot \arcsin(\sin(a \cdot t + d))\)</p>
 
   </article>
   <!-- Presenter Notes -->
@@ -1568,7 +1568,7 @@ click and drag to rotate the figure, use the mouse wheel or middle button to zoo
 The github repo: <a href="http://github.com/skilchen/lissajous_playground">http://github.com/skilchen/lissajous_playground</a>  </p>
 
 <p>Please give it a try. 
-Unfortunately on shinyapps.io my application occasionaly has very bad response times. I don&#39;t know why ...</p>
+Unfortunately on shinyapps.io my application occasionally has very bad response times. I don&#39;t know why ...</p>
 
   </article>
   <!-- Presenter Notes -->

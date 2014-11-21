@@ -20,7 +20,7 @@ CanvasMatrix4=function(m){if(typeof m=='object'){if("length"in m&&m.length>=16){
 3. Display the figures in a 3D WebGL canvas that allows the user to rotate and zoom the figure. I am using the [RGL package](https://r-forge.r-project.org/projects/rgl/).
 4. Let the user store parameters that produced nice looking figures in a database and display the stored parameters in a [DataTable](http://shiny.rstudio.com/articles/datatables.html).
 5. Increment a count of how many times a parameterset was selected and update the database to store the new count.
-5. Let the user click on a row in the DataTable to display the figure which is produced by the parameters stored in the selected row.
+5. Let the user click on a row in the DataTable to display the figure which is produced by the parameters stored in the selected row. The [DataTable](http://shiny.rstudio.com/articles/datatables.html) currently has no such feature. I am reusing a solution described in this [discussion](https://groups.google.com/forum/#!topic/shiny-discuss/_zNZMR2gHn0) in the Google group about shiny.  
 6. Store the favorite parameters persistently across sessions and application restarts using a [mongoDB](http://www.mongodb.org) hosted on [mongolab](http://mongolab.com).
 
 
@@ -37,7 +37,7 @@ where
 * t is the range of values for which the equations are evaluated
 
 To simplify the matters, in my toy application some of the parameters have fixed values, namely: $A = B = c = 1$, $d = e = f = 0$ and t is defined as `seq(0, 2*pi, length.out = 3 * 360)`.  
-The user can choose the values for a, b and c. Additionaly he can choose to draw the figures using lines or spheres. The figures can also be drawn using triangle waves of the form $x = A \cdot \arcsin(\sin(a \cdot t + d))$
+The user can choose the values for a, b and c. Additionally she can choose to draw the figures using lines or spheres. The figures can also be drawn using triangle waves of the form $x = A \cdot \arcsin(\sin(a \cdot t + d))$
 
 ---
 ### Example Lissajous Figure
@@ -1503,7 +1503,7 @@ My toy application: http://skilchen.shinyapps.io/lissajous_playground
 The github repo: http://github.com/skilchen/lissajous_playground  
 
 Please give it a try. 
-Unfortunately on shinyapps.io my application occasionaly has very bad response times. I don't know why ...
+Unfortunately on shinyapps.io my application occasionally has very bad response times. I don't know why ...
 
 
 
