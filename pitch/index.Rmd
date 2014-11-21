@@ -20,7 +20,7 @@ cat('<script type="text/javascript">', readLines(system.file('WebGL', 'CanvasMat
 
 1. Use [something](http://en.wikipedia.org/wiki/Lissajous_curve) interesting to play with to learn shiny.
 2. Let the user interactively select parameters to draw Lissajous figures.
-3. Display the figures in a 3D WebGL canvas that allows the user to rotate and zoom the figure. I am using th [RGL package](https://r-forge.r-project.org/projects/rgl/).
+3. Display the figures in a 3D WebGL canvas that allows the user to rotate and zoom the figure. I am using the [RGL package](https://r-forge.r-project.org/projects/rgl/).
 4. Let the user store parameters that produced nice looking figures in a database and display the stored parameters in a [DataTable](http://shiny.rstudio.com/articles/datatables.html).
 5. Increment a count of how many times a parameterset was selected and update the database to store the new count.
 5. Let the user click on a row in the DataTable to display the figure which is produced by the parameters stored in the selected row.
