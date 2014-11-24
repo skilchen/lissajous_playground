@@ -6,7 +6,7 @@ R [shiny](http://shiny.rstudio.com) app to play with lissajous figures
 ##Context
 This toy application was built as a course project in the context of the coursera course [Developing Data Products](https://www.coursera.org/course/devdataprod).
 
-I didn't want to make one more of the more or less silly "analyses" of the data sets available in R and its package system. Therefore I decided to try to implement something that - for me - was interesting to play with and that allowed me to learn some important features of shiny. 
+I didn't want to add one more of the more or less silly "analyses" of the data sets available in R and its package system. Therefore I decided to try to implement something that - for me - was interesting to play with and that allowed me to learn some important features of shiny. 
 
 ##Goals
 My goals were:  
