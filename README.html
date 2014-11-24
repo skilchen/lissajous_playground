@@ -58,7 +58,7 @@ if (window.hljs && document.readyState && document.readyState === "complete") {
 <div id="context" class="section level2">
 <h2>Context</h2>
 <p>This toy application was built as a course project in the context of the coursera course <a href="https://www.coursera.org/course/devdataprod">Developing Data Products</a>.</p>
-<p>I didn’t want to make one more of the more or less silly “analyses” of the data sets available in R and its package system. Therefore I decided to try to implement something that - for me - was interesting to play with and that allowed me to learn some important features of shiny.</p>
+<p>I didn’t want to add one more of the more or less silly “analyses” of the data sets available in R and its package system. Therefore I decided to try to implement something that - for me - was interesting to play with and that allowed me to learn some important features of shiny.</p>
 </div>
 <div id="goals" class="section level2">
 <h2>Goals</h2>
@@ -70,7 +70,7 @@ if (window.hljs && document.readyState && document.readyState === "complete") {
 <li><p>Let the user review the figures that others found interesting by interactively selecting a row in a shiny DataTable. The default <a href="http://shiny.rstudio.com/articles/datatables.html">DataTable</a> implementation has no feature to select rows. I found a solution in this <a href="https://groups.google.com/forum/#!topic/shiny-discuss/_zNZMR2gHn0">discussion</a> in the Google group about the shiny framework. The two files <a href="http://github.com/skilchen/lissajous_playground/global.R">global.R</a> and <a href="http://github.com/skilchen/lissajous_playground/www/js/DTbinding.js">DTBinding.js</a> are essentially slightly adapted (global.R) copies from <a href="https://groups.google.com/group/shiny-discuss/attach/987db1d8d2b5dc3b/SelectableDataTables.zip?part=0.1">SelectableDataTables.zip</a>.</p></li>
 <li><p>Store the parameters for interesting figures persistently across sessions, server restarts and application redeployments. In the following <a href="http://shiny.rstudio.com/articles/share-data.html">article</a> I found hints on <a href="http://www.mongodb.org">mongoDB</a>, <a href="http://cran.r-project.org/web/packages/rmongodb/index.html">rmongodb</a> and on free <a href="https://mongolab.com">MongoDB Hosting</a>. So I decided to learn some small pieces of modern NoSQL technology to implement my persistence goal.</p></li>
 </ul>
-<p>That’s it. You can try my toy application at <a href="http://skilchen.shinyapps.io/lissajous_playground">ShinyApps.io</a> and get the code from <a href="http://github.com/skilchen/lissajous_playground">here</a> and do with it whatever you want. The requested presentation is available at the projects <a href="http://skilchen.github.io/lissajous_playground/pitch/index.html">gh-pages</a>.</p>
+<p>That’s it. You can try my toy application at <a href="http://skilchen.shinyapps.io/lissajous_playground">ShinyApps.io</a> and get the code from <a href="http://github.com/skilchen/lissajous_playground">here</a> and do with it whatever you want. The requested presentation is available at the projects <a href="http://skilchen.github.io/lissajous_playground/pitch/index.html">gh-pages</a>. or at <a href="http://rpubs.com/skilchen/pitch_lissajous_playground">rpubs</a></p>
 </div>
 <div id="usage" class="section level2">
 <h2>Usage</h2>

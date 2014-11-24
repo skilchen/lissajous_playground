@@ -6,7 +6,7 @@ R [shiny](http://shiny.rstudio.com) app to play with lissajous figures
 ##Context
 This toy application was built as a course project in the context of the coursera course [Developing Data Products](https://www.coursera.org/course/devdataprod).
 
-I didn't want to make one more of the more or less silly "analyses" of the data sets available in R and its package system. Therefore I decided to try to implement something that - for me - was interesting to play with and that allowed me to learn some important features of shiny. 
+I didn't want to add one more of the more or less silly "analyses" of the data sets available in R and its package system. Therefore I decided to try to implement something that - for me - was interesting to play with and that allowed me to learn some important features of shiny. 
 
 ##Goals
 My goals were:  
@@ -21,7 +21,7 @@ My goals were:
 
 * Store the parameters for interesting figures persistently across sessions, server restarts and application redeployments. In the following [article](http://shiny.rstudio.com/articles/share-data.html) I found hints on [mongoDB](http://www.mongodb.org), [rmongodb](http://cran.r-project.org/web/packages/rmongodb/index.html) and on free [MongoDB Hosting](https://mongolab.com). So I decided to learn some small pieces of modern NoSQL technology to implement my persistence goal.
 
-That's it. You can try my toy application at [ShinyApps.io](http://skilchen.shinyapps.io/lissajous_playground) and get the code from [here](http://github.com/skilchen/lissajous_playground) and do with it whatever you want. The requested presentation is available at the projects [gh-pages](http://skilchen.github.io/lissajous_playground/pitch/index.html).
+That's it. You can try my toy application at [ShinyApps.io](http://skilchen.shinyapps.io/lissajous_playground) and get the code from [here](http://github.com/skilchen/lissajous_playground) and do with it whatever you want. The requested presentation is available at the projects [gh-pages](http://skilchen.github.io/lissajous_playground/pitch/index.html). or at [rpubs](http://rpubs.com/skilchen/pitch_lissajous_playground)
 
 ##Usage
 My toy application doesn't need much explanation. Just [start it](http://skilchen.shinyapps.io/lissajous_playground) and play around. Try to drag/zoom the plotted figure. I find it very interesting how those figures change, depending on the viewpoint. (There might even be something to learn from this, if we make e.g. principal component analyses which often project some data on a low dimensional space and rotate the coordinate system according to some optimality criterion. Obviously this dimensionality reduction and rotation of the coordinate system may have a strong impact on how the "world" looks like.) 
